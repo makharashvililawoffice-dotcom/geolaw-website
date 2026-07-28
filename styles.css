@@ -308,6 +308,93 @@ h3 {
   color: var(--gray-500);
 }
 
+/* Case Law Library */
+.caselaw-disclaimer { margin-top: 12px; max-width: 720px; }
+
+.caselaw-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0 20px;
+  flex-wrap: wrap;
+}
+
+#caselaw-search {
+  flex: 1 1 320px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border: 1px solid var(--black);
+  background: var(--white);
+  color: var(--ink);
+}
+
+.caselaw-count {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+.caselaw-list {
+  border-top: 1px solid var(--black);
+}
+
+.case-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--ink);
+  flex-wrap: wrap;
+  transition: background 0.15s;
+}
+
+.case-row:hover { background: var(--gray-100); }
+
+.case-row-main {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.case-title { font-weight: 600; color: var(--black); }
+
+.case-appno { font-size: 0.8rem; color: var(--gray-500); white-space: nowrap; }
+
+.case-row-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.case-articles { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.case-date { font-size: 0.78rem; color: var(--gray-500); min-width: 88px; text-align: right; }
+
+.case-badge, .art-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid var(--gray-300);
+  color: var(--gray-700);
+  white-space: nowrap;
+}
+
+.case-badge.imp-key { border-color: var(--red); color: var(--red); }
+.case-badge.imp-high { border-color: var(--black); color: var(--black); }
+
+.art-badge.art-violation { border-color: var(--red); color: var(--red); }
+.art-badge.art-no-violation { border-color: var(--gray-300); color: var(--gray-500); }
+
 /* Contact */
 .contact-grid {
   display: grid;

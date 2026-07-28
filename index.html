@@ -20,6 +20,7 @@
       <button class="tab-btn" data-tab="about">About</button>
       <button class="tab-btn" data-tab="practice">Practice Areas</button>
       <button class="tab-btn" data-tab="experience">Experience &amp; Cases</button>
+      <button class="tab-btn" data-tab="caselaw">Case Law Library</button>
       <button class="tab-btn" data-tab="contact">Contact</button>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
@@ -181,6 +182,24 @@
     to confidentiality and client consent.</p>
   </section>
 
+  <!-- CASE LAW LIBRARY -->
+  <section id="caselaw" class="tab-panel">
+    <h2>Case Law Library</h2>
+    <p class="lead">A working reference of European Court of Human Rights judgments concerning
+    Georgia, drawn from the Court&rsquo;s public HUDOC database.</p>
+    <p class="note caselaw-disclaimer">This library is provided as general legal reference material
+    only &mdash; it is <strong>not</strong> a record of cases litigated by this office. Full text of
+    every judgment is available on the Court&rsquo;s official
+    <a href="https://hudoc.echr.coe.int/" target="_blank" rel="noopener noreferrer">HUDOC</a> site.</p>
+
+    <div class="caselaw-controls">
+      <input type="search" id="caselaw-search" placeholder="Search by case name, application number, or article (e.g. Article 3)">
+      <span id="caselaw-count" class="caselaw-count"></span>
+    </div>
+
+    <div id="caselaw-list" class="caselaw-list" aria-live="polite"></div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="tab-panel">
     <h2>Contact</h2>
@@ -216,6 +235,8 @@
   </div>
 </footer>
 
+<script src="echr-cases.js"></script>
+<script src="caselaw.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
