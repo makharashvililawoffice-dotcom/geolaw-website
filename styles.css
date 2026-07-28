@@ -494,6 +494,14 @@ h3 {
   color: var(--gray-500);
 }
 
+.news-image {
+  display: block;
+  width: calc(100% + 56px);
+  margin: -34px -28px 18px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .news-date {
   display: block;
   font-size: 0.78rem;
