@@ -4,12 +4,20 @@
   var navToggle = document.querySelector('.nav-toggle');
   var tabsNav = document.querySelector('.tabs');
 
+  function revealPanel(panel) {
+    panel.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  }
+
   function activate(name) {
     tabButtons.forEach(function (btn) {
       btn.classList.toggle('active', btn.getAttribute('data-tab') === name);
     });
     panels.forEach(function (panel) {
-      panel.classList.toggle('active', panel.id === name);
+      var isMatch = panel.id === name;
+      panel.classList.toggle('active', isMatch);
+      if (isMatch) revealPanel(panel);
     });
     tabsNav.classList.remove('open');
   }
@@ -38,4 +46,23 @@
   }
 
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  }
 })();
