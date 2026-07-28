@@ -228,6 +228,23 @@ h3 {
 
 .tab-panel:not(#home) .lead { margin-left: 20px; }
 
+.about-intro {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.about-portrait {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
 /* Hero band (full-bleed) */
 .hero-band {
   position: relative;
@@ -252,6 +269,26 @@ h3 {
 }
 
 .hero-inner { position: relative; z-index: 1; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-portrait { justify-self: end; }
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid rgba(221, 187, 120, 0.4);
+  box-shadow: var(--shadow-md);
+}
 
 .hero { max-width: 760px; margin-bottom: 0; }
 
@@ -455,6 +492,33 @@ h3 {
   margin-left: 20px;
   font-size: 0.85rem;
   color: var(--gray-500);
+}
+
+/* Photo gallery */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 24px 0 0 20px;
+}
+
+.photo-item {
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Case Law Library */
@@ -682,8 +746,15 @@ h3 {
   .hero-band { padding: 64px 0 104px; }
   .hero-motif { width: 300px; height: 300px; right: -100px; }
 
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-portrait { justify-self: center; order: -1; margin-bottom: 28px; }
+  .hero-portrait img { max-width: 220px; }
+
+  .about-intro { flex-direction: column; align-items: center; }
+  .about-intro > div { width: 100%; }
+
   h2, .tab-panel:not(#home) .lead, .timeline, .plain-list, .grid, .contact-grid, .note,
-  .caselaw-disclaimer, .caselaw-controls, .caselaw-list {
+  .caselaw-disclaimer, .caselaw-controls, .caselaw-list, .photo-gallery {
     margin-left: 0;
   }
   h2 { padding-left: 16px; }
