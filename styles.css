@@ -536,6 +536,20 @@ h3 {
   margin-top: 18px;
 }
 
+.btn-outline.news-link {
+  background: var(--navy-900);
+  color: var(--cream);
+  border-color: var(--navy-900);
+}
+
+.btn-outline.news-link:hover {
+  background: var(--navy-950);
+  border-color: var(--navy-950);
+  color: var(--cream);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
 /* Insights article */
 .article-cover {
   display: block;
