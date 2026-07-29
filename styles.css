@@ -536,6 +536,25 @@ h3 {
   margin-top: 18px;
 }
 
+/* Insights article */
+.article-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.article-body {
+  max-width: 720px;
+}
+
+.article-body p {
+  margin: 0 0 18px;
+}
+
 /* Photo gallery */
 .photo-gallery {
   display: grid;

@@ -1,5 +1,5 @@
 (function () {
-  var tabButtons = document.querySelectorAll('.tab-btn');
+  var tabButtons = document.querySelectorAll('button.tab-btn');
   var panels = document.querySelectorAll('.tab-panel');
   var navToggle = document.querySelector('.nav-toggle');
   var tabsNav = document.querySelector('.tabs');
